@@ -14,7 +14,7 @@ body { margin: 0; }
   --color-bg: #000000;            /* near-black */
   --color-surface: #000000;       /* header surface */
   --color-text: #e7e9ea;          /* primary text */
-  --color-fg: var(--color-text);  /* foreground color (reusable) */
+  --color-fg: #ffffff;            /* foreground color (pure white for dividers/borders) */
   --color-muted: #9aa0a6;         /* subdued text */
   --color-accent: #44a1ff;        /* cyan accent (retro hint) */
   --color-accent-weak: rgba(0, 2, 3, 0.25);
@@ -183,11 +183,13 @@ a:hover { text-decoration: none; }
 /* Extra-small phones */
 @media (max-width: 480px) {
   .container { padding-inline: var(--space-4); }
-  .header__bar { height: 60px; }
+  .header__bar { height: auto; padding-block: var(--space-3); }
   .brand { font-size: 22px; letter-spacing: 0.3px; }
   .nav { gap: var(--space-2); }
   .nav__link { font-size: var(--font-size-md); padding: var(--space-2) var(--space-3); }
   .social__link { font-size: var(--font-size-xs); }
+  /* Ensure content clears the header comfortably on mobile */
+  .portfolio { padding-top: calc(var(--space-6) * 2); }
 }
 
 /* 8) Portfolio */
