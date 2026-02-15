@@ -81,7 +81,6 @@ a:hover { text-decoration: none; }
   top: 0;
   z-index: 10;
   background: var(--color-surface);
-  border-bottom: var(--header-divider-thickness) solid var(--color-fg);
 }
 
 .header__bar {
@@ -90,6 +89,7 @@ a:hover { text-decoration: none; }
   align-items: center;
   gap: var(--space-4);
   height: 72px;
+  border-bottom: var(--header-divider-thickness) solid var(--color-fg); /* divider sits under nav */
 }
 
 /* Left: title */
@@ -178,6 +178,8 @@ a:hover { text-decoration: none; }
   .brand { grid-column: 1 / 2; }
   .nav { grid-column: 1 / -1; order: 3; flex-wrap: wrap; gap: var(--space-3); padding-top: var(--space-2); }
   .social { grid-column: 2 / 3; }
+  /* add extra spacing under header on small tablets */
+  .portfolio { padding-top: calc(var(--space-6) * 2); }
 }
 
 /* Extra-small phones */
