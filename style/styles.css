@@ -179,3 +179,82 @@ a:hover { text-decoration: none; }
   .nav { grid-column: 1 / -1; order: 3; flex-wrap: wrap; gap: var(--space-3); padding-top: var(--space-2); }
   .social { grid-column: 2 / 3; }
 }
+
+/* Extra-small phones */
+@media (max-width: 480px) {
+  .container { padding-inline: var(--space-4); }
+  .header__bar { height: 60px; }
+  .brand { font-size: 22px; letter-spacing: 0.3px; }
+  .nav { gap: var(--space-2); }
+  .nav__link { font-size: var(--font-size-md); padding: var(--space-2) var(--space-3); }
+  .social__link { font-size: var(--font-size-xs); }
+}
+
+/* 8) Portfolio */
+.portfolio {
+  padding-block: var(--space-6);
+}
+
+.portfolio__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: calc(var(--space-6) * 2);
+}
+
+.portfolio__intro { margin-bottom: 0; }
+.portfolio__intro {
+  border-bottom: var(--header-divider-thickness) solid var(--color-fg);
+  padding-bottom: calc(var(--space-6) * 2);
+}
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0 0 var(--space-2) 0;
+}
+.section-desc {
+  max-width: 65ch;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+/* Thick white divider between project entries */
+.portfolio__list .project-card + .project-card {
+  border-top: var(--header-divider-thickness) solid var(--color-fg);
+  padding-top: calc(var(--space-6) * 1.5);
+}
+
+/* Ensure the first project has equal spacing below the intro divider */
+.portfolio__list .project-card:first-child {
+  padding-top: calc(var(--space-6) * 1.5);
+}
+
+.project-card--reverse .project-card__media { order: 2; }
+.project-card--reverse .project-card__content { order: 1; }
+
+.project-card__media {
+  aspect-ratio: 16 / 9;
+  border: 3px solid var(--color-fg);
+  background: rgba(255,255,255,0.05);
+}
+
+.project-card__content { max-width: 60ch; }
+.project-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-2) 0;
+}
+.project-card__desc { color: var(--color-text); }
+
+@media (max-width: 720px) {
+  .project-card { grid-template-columns: 1fr; }
+  .project-card--reverse .project-card__media,
+  .project-card--reverse .project-card__content { order: initial; }
+}
