@@ -7,20 +7,14 @@
     <link rel="stylesheet" href="../style/styles.css" />
   </head>
   <body>
-    <!-- Site Header Only (homepage WIP) -->
     <header class="header" role="banner">
       <div class="container header__bar">
-        <!-- Left: Title/Brand -->
-        <a class="brand title" href="/">John Uzoka</a>
-
-        <!-- Center: Main navigation -->
+        <a class="brand title" href="./">John Uzoka</a>
         <nav class="nav" aria-label="Main">
-          <a class="nav__link" href="../portfolio/">Portfolio</a>
-          <a class="nav__link" href="../resume/">Resume</a>
-          <a class="nav__link" href="../contact/">Contact</a>
+          <a class="nav__link" href="./portfolio/">Portfolio</a>
+          <a class="nav__link" href="./resume/">Resume</a>
+          <a class="nav__link" href="./contact/">Contact</a>
         </nav>
-
-        <!-- Right: Social links (placeholders) -->
         <nav class="social" aria-label="Social">
           <a class="social__link" href="https://github.com/JohnUzoka" target="_blank" rel="noopener">GitHub</a>
           <a class="social__link" href="https://www.linkedin.com/in/johnuzoka/" target="_blank" rel="noopener">LinkedIn</a>
@@ -28,8 +22,74 @@
       </div>
     </header>
 
-    <!-- Intentionally empty main; header is the only content for now -->
-    <main class="container" role="main" aria-label="Content"></main>
+    <main class="container home" role="main" aria-label="Content">
+      <section class="home__intro">
+        <h1 class="section-title">Welcome to my Portfolio</h1>
+        <p class="section-desc">A short introduction to my work, my approach to game development, and a small gallery of selected projects for anyone who wants to explore further.</p>
+      </section>
+
+      <section class="home__profile" aria-label="Bio and artist statement">
+        <article class="home__profile-card">
+          <p class="home__profile-label">Bio</p>
+          <p class="home__profile-text">John Uzoka is a video game programmer specializing in C++, Unreal Engine, and Godot Engine. He has experience developing gameplay mechanics, optimizing systems, and integrating assets in ways that balance technical performance with artistic intent. He also works in UI/UX design, focusing on clarity and player-centered interaction.</p>
+        </article>
+
+        <article class="home__profile-card">
+          <p class="home__profile-label">Artist Statement</p>
+          <p class="home__profile-text">I develop games centered on meaningful interaction, using mechanics and UI as artistic tools to support emotion and narrative. Inspired by retro games, I value minimalism and technical optimization, embracing constraint as a creative force that encourages clarity, intentional design, and strong visual identity. I focus on engaging players through distinct, evolving challenges that promote learning, reflection, and agency. My goal is to craft expressive, carefully refined experiences that stay with players long after the controller is set down.</p>
+        </article>
+      </section>
+
+      <section class="home__grid" aria-label="Selected projects">
+          <a class="home-card home-card--wide" href="./portfolio/project1/" aria-label="Deep Diver">
+          <span class="home-card__media">
+            <img class="home-card__img home-card__img--static" src="../assets/portfolio/project1/2.png" alt="Deep Diver static preview" />
+            <img class="home-card__img home-card__img--hover" src="../assets/portfolio/project1/3.gif" alt="Deep Diver animated preview" />
+          </span>
+          <span class="home-card__title">Deep Diver</span>
+        </a>
+
+          <a class="home-card" href="./portfolio/project2/" aria-label="Space Raider">
+          <span class="home-card__media">
+            <img class="home-card__img home-card__img--static" src="../assets/portfolio/project2/2.png" alt="Space Raider static preview" />
+            <img class="home-card__img home-card__img--hover" src="../assets/portfolio/project2/3.gif" alt="Space Raider animated preview" />
+          </span>
+          <span class="home-card__title">Space Raider</span>
+        </a>
+
+          <a class="home-card" href="./portfolio/project3/" aria-label="Toon Tanks">
+          <span class="home-card__media">
+            <img class="home-card__img home-card__img--static" src="../assets/portfolio/project3/2.png" alt="Toon Tanks static preview" />
+            <img class="home-card__img home-card__img--hover" src="../assets/portfolio/project3/3.gif" alt="Toon Tanks animated preview" />
+          </span>
+          <span class="home-card__title">Toon Tanks</span>
+        </a>
+
+          <a class="home-card" href="./portfolio/project4/" aria-label="ThirdPerson Shooter">
+          <span class="home-card__media">
+            <img class="home-card__img home-card__img--static" src="../assets/portfolio/project4/2.png" alt="ThirdPerson Shooter static preview" />
+            <img class="home-card__img home-card__img--hover" src="../assets/portfolio/project4/3.gif" alt="ThirdPerson Shooter animated preview" />
+          </span>
+          <span class="home-card__title">ThirdPerson Shooter</span>
+        </a>
+
+          <a class="home-card home-card--feature" href="./portfolio/project8/" aria-label="Man vs Bot">
+          <span class="home-card__media">
+            <img class="home-card__img home-card__img--static" src="../assets/portfolio/project8/2.png" alt="Man vs Bot static preview" />
+            <img class="home-card__img home-card__img--hover" src="../assets/portfolio/project8/3.png" alt="Man vs Bot alternate preview" />
+          </span>
+          <span class="home-card__title">Man vs Bot</span>
+        </a>
+
+          <a class="home-card" href="./portfolio/project10/" aria-label="Shepherd's Crook">
+          <span class="home-card__media">
+            <img class="home-card__img home-card__img--static" src="../assets/portfolio/project10/2.png" alt="Shepherd's Crook static preview" />
+            <img class="home-card__img home-card__img--hover" src="../assets/portfolio/project10/3.png" alt="Shepherd's Crook alternate preview" />
+          </span>
+          <span class="home-card__title">Shepherd's Crook</span>
+        </a>
+      </section>
+    </main>
   </body>
   
 </html>
