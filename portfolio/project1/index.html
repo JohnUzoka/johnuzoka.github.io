@@ -39,9 +39,44 @@
       </section>
 
       <section class="project-detail__description">
-        <h2>Detailed Description</h2>
-        <p>This section is reserved for a full project breakdown. You can expand this with gameplay goals, level design approach, technical implementation details, and lessons learned.</p>
-        <p>Add details such as your development process, challenges you solved, and what you would improve in the next iteration.</p>
+        <h2>The Concept</h2>
+        <p>This game was built around a simple risk-versus-reward loop: dive deeper into a cavern, face higher difficulty, and earn greater rewards. The further down you go, the more you stand to gain or lose. It's a 2D platformer that pushes players to ask themselves, "Is one more level worth it?"</p>
+
+        <h3>My Role</h3>
+        <p>This was a collaborative project where I stepped into multiple roles: Project Manager, Game Designer, Base Game Prototype Developer, Programmer, Art Coordinator, and Level Designer. I coordinated my teammates, who focused on level creation, while I handled the core systems, design vision, and overall delivery.</p>
+
+        <h3>What I Built</h3>
+        <ul>
+          <li><strong>Player character</strong> - Responsive platformer movement with tuned jumping trajectory and gravity. Getting the feel right was essential for a Mario-style game.</li>
+          <li><strong>Three enemy types</strong>
+            <ul>
+              <li>Stationary enemy that jumps at the player when in range (killable by stomping)</li>
+              <li>Left-right patrolling enemy (also killable by stomping)</li>
+              <li>Flying enemy that moves left to right (unkillable, just something you have to avoid)</li>
+            </ul>
+          </li>
+          <li><strong>Randomized level system</strong> - The game has 3 stages, each with a set of levels that shuffle on every playthrough. We chose randomization over a fully procedural system given our 5-week timeline. It gave us variety without overcomplicating development.</li>
+          <li><strong>Player health and coin system</strong> - Tracked resources that feed into the risk/reward loop.</li>
+          <li><strong>Start and end game menus</strong> - Clean entry and exit points for the player experience.</li>
+        </ul>
+
+        <h3>The Design Process</h3>
+        <p>Randomization was a core goal from the start. We wanted each run to feel fresh, but with only five weeks, a full procedural generation system wasn't realistic. So we designed a randomized level selector instead, simpler to implement, but still effective at creating variety.</p>
+        <p>I led that decision and coordinated with my teammates to make sure the level pieces they built could slot cleanly into the randomized structure.</p>
+
+        <h3>The Hardest Part: Collisions</h3>
+        <p>I didn't realize how crucial precise collisions were for a platformer until I was deep in it. In a Mario-style game, every pixel matters. Balancing the physics with gameplay collisions was genuinely difficult, jump timing, landing detection, enemy stomping, all of it had to feel fair. I went through several iterations, but I eventually found solutions that made everything work smoothly.</p>
+
+        <h3>Asset Sourcing</h3>
+        <p>All assets came from itch.io. With a tight timeline, sourcing externally let us focus our energy on systems and design rather than creating art from scratch.</p>
+
+        <h3>What I Learned About Leadership</h3>
+        <p>This project was my first time leading a small team in a game dev environment. I had to coordinate work, make design calls, and keep us moving toward a shared vision, all while building the core systems myself. It taught me how to communicate across roles, when to make a final call, and how to trust teammates to handle their pieces while I handled mine.</p>
+
+        <h3>Final Thought</h3>
+        <p>If you'd like to try it, here's the compiled prototype. Windows might give a virus warning (common for uncompiled builds), but it's safe.</p>
+        <p><a href="https://github.com/JohnUzoka/Deep-Diver-Game/releases/tag/prototype" target="_blank" rel="noopener">https://github.com/JohnUzoka/Deep-Diver-Game/releases/tag/prototype</a></p>
+        <p>It's not a big game, but it's proof that I can learn a new engine, lead a team, and ship something playable under a deadline. And I'm proud of that.</p>
       </section>
 
       <section class="project-detail__gallery">
