@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ThirdPerson Shooter | Portfolio</title>
+    <link rel="stylesheet" href="../../style/styles.css" />
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <div class="container header__bar">
+        <a class="brand title" href="../../">John Uzoka</a>
+        <nav class="nav" aria-label="Main">
+          <a class="nav__link" href="../../portfolio/">Portfolio</a>
+          <a class="nav__link" href="../../contact/">Contact</a>
+        </nav>
+        <nav class="social" aria-label="Social">
+          <a class="social__link" href="https://github.com/JohnUzoka" target="_blank" rel="noopener">GitHub</a>
+          <a class="social__link" href="https://www.linkedin.com/in/johnuzoka/" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container project-detail" role="main" aria-label="Project details">
+      <section class="project-detail__intro">
+        <div>
+          <p class="project-detail__eyebrow">Project 4</p>
+          <h1 class="project-detail__title">ThirdPerson Shooter</h1>
+          <p class="project-detail__summary">A third-person shooter game made in Unreal Engine as a one-day challenge, featuring different weapons, third-person movement and aiming, as well as health reduction and regeneration.</p>
+          <div class="project-detail__meta">
+            <span class="project-detail__tag">Unreal Engine</span>
+            <span class="project-detail__tag">One-Day Challenge</span>
+            <span class="project-detail__tag">Third-Person Shooter</span>
+          </div>
+        </div>
+        <figure class="project-detail__lead-media">
+          <img src="../../assets/portfolio/thirdperson-shooter/2.png" alt="ThirdPerson Shooter featured screenshot" />
+        </figure>
+      </section>
+
+      <section class="project-detail__description">
+        <h2>The Challenge</h2>
+        <p>I was given one day to build a third-person shooter in Unreal Engine using only Blueprints. No shortcuts, no pre-made weapon systems, just me, the engine, and a ticking clock. The goal wasn't to make something polished, but to prove I could design, implement, and connect multiple game systems under real pressure.</p>
+
+        <h3>What I Set Out to Build</h3>
+        <p>I was given a small but meaningful feature set:</p>
+        <ul>
+          <li><strong>Two ranged weapons with different damage, fire rates, and behaviors:</strong>
+            <ul>
+              <li>A rifle/minigun: 15 damage per bullet, 4 rounds/second, straightforward.</li>
+              <li>A pistol: 5 damage per bullet with a bleeding effect (2 damage/sec for 10 seconds, resetting on reapplication).</li>
+            </ul>
+          </li>
+          <li><strong>One enemy to test combat:</strong> no death for anyone, just a health bar that goes down and slowly regens.</li>
+          <li><strong>A stamina system:</strong> that affects movement speed in tiers (100-50% normal, 50-25% slower, 25-0% much slower). No stamina death, just fatigue slowing you down.</li>
+          <li><strong>An HUD:</strong> showing stamina, current weapon, and ammo.</li>
+          <li><strong>Two interactive areas:</strong> one that increases stamina (like healing) and one that decreases it (like damage).</li>
+        </ul>
+
+        <h3>The Extra Mechanics I Added</h3>
+        <p>Beyond the core requirements, I wanted the game to feel more like a real shooter, so I added a few things on my own:</p>
+        <ul>
+          <li><strong>Crouching</strong> – because I wanted to learn how to move between player movement states.</li>
+          <li><strong>Aim Down Sights (ADS)</strong> – tighter camera, slower movement, better precision.</li>
+          <li><strong>Weapon swapping</strong> – fluid switching between the rifle and pistol during combat.</li>
+          <li><strong>Aim offset</strong> – so the character's upper body actually rotates toward the reticle while moving. It's a small detail, but it made the character feel alive instead of stiff.</li>
+        </ul>
+
+        <h3>My Design Process</h3>
+        <p>I started from Unreal's Third-Person Template to save time hunting for assets. That decision alone made the difference—it gave me a working character and camera so I could jump straight into mechanics.</p>
+        <p>From there, I worked in a specific order that made sense to me:</p>
+        <ul>
+          <li><strong>Weapons, aiming, and crouching first</strong> – I wanted the core shooting and character movement to feel right before anything else. Getting the rifle and pistol working, swapping between them, aiming down sights, and crouching gave me a solid foundation to build on.</li>
+          <li><strong>Then the HUD</strong> – Once the weapons felt good, I needed to see what was happening. Stamina bar, weapon indicator, ammo counter, all the real-time feedback a player needs.</li>
+          <li><strong>Then the enemy</strong> – With the player fully functional, I built the test enemy. Health bar, damage reactions, and that slow health regen. No enemy death, just a punching bag to test my weapons.</li>
+          <li><strong>Stamina and interaction zones last</strong> – I saved the stamina system and the two interactable areas (increase/decrease stamina) for the end. Tuning the movement speed tiers took some trial and error to get the fatigue feeling right, slowing down just enough to be noticeable but not frustrating.</li>
+        </ul>
+        <p>One thing I'm proud of is the bleeding effect logic. Restarting the bleed timer on reapplication took a few tries to get right in Blueprints, but once it clicked, it felt clean. The aim offset was another satisfying win—getting the spine rotation to play nicely with movement animations took some trial and error.</p>
+
+        <h3>What Made It Hard</h3>
+        <p>The biggest challenge wasn't code, it was assets. Finding usable sounds and visual effects on short notice forced me to be resourceful and adapt fast. In a real dev environment, that's exactly the kind of constraint you face.</p>
+
+        <h3>What I Learned About Myself</h3>
+        <p>This project gave me more than technical practice. It showed me how I work under a tight deadline. I learned to prioritize ruthlessly, accept small imperfections, and keep moving forward instead of getting stuck perfecting one system. That pressure felt surprisingly real, and useful. I can see now how a game studio environment demands exactly that mindset.</p>
+        <p>Also, I learned that I like adding the little things. Crouching, ADS, aim offsets—none of them were required, but they're what make a game feel responsive and satisfying. That's the kind of developer I want to be: someone who cares about the feel, not just the checklist.</p>
+
+        <h3>Final Thought</h3>
+        <p>It's just a simple prototype. No death, one enemy, a few interactions. But for me, it was a glimpse into what it feels like to build across multiple systems—combat, UI, movement, interaction, animation—all in a single day.</p>
+      </section>
+
+      <section class="project-detail__gallery">
+        <h2>Project Media</h2>
+        <div class="project-detail__gallery-grid">
+          <figure class="project-detail__gallery-item"><img src="../../assets/portfolio/thirdperson-shooter/1.png" alt="ThirdPerson Shooter screenshot 1" /></figure>
+          <figure class="project-detail__gallery-item"><img src="../../assets/portfolio/thirdperson-shooter/3.gif" alt="ThirdPerson Shooter gameplay gif" /></figure>
+          <figure class="project-detail__gallery-item"><img src="../../assets/portfolio/thirdperson-shooter/4.png" alt="ThirdPerson Shooter screenshot 2" /></figure>
+        </div>
+        <a class="project-detail__back" href="../">Back to Portfolio</a>
+      </section>
+    </main>
+  </body>
+</html>
