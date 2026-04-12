@@ -7,20 +7,13 @@
     <link rel="stylesheet" href="../style/styles.css" />
   </head>
   <body>
-    <!-- Site Header Only (homepage WIP) -->
     <header class="header" role="banner">
       <div class="container header__bar">
-        <!-- Left: Title/Brand -->
-        <a class="brand title" href="/">John Uzoka</a>
-
-        <!-- Center: Main navigation -->
+        <a class="brand title" href="../">John Uzoka</a>
         <nav class="nav" aria-label="Main">
           <a class="nav__link" href="../portfolio/">Portfolio</a>
-          <a class="nav__link" href="../resume/">Resume</a>
           <a class="nav__link" href="../contact/">Contact</a>
         </nav>
-
-        <!-- Right: Social links (placeholders) -->
         <nav class="social" aria-label="Social">
           <a class="social__link" href="https://github.com/JohnUzoka" target="_blank" rel="noopener">GitHub</a>
           <a class="social__link" href="https://www.linkedin.com/in/johnuzoka/" target="_blank" rel="noopener">LinkedIn</a>
@@ -28,8 +21,27 @@
       </div>
     </header>
 
-    <!-- Intentionally empty main; header is the only content for now -->
-    <main class="container" role="main" aria-label="Content"></main>
+    <main class="container" role="main" aria-label="Contact content">
+      <section class="home__intro">
+        <h1 class="section-title">Contact</h1>
+        <p class="section-desc">Feel free to reach out by email or connect with me on LinkedIn.</p>
+      </section>
+
+      <section class="home__profile" aria-label="Contact links">
+        <article class="home__profile-card">
+          <p class="home__profile-label">Email</p>
+          <p class="home__profile-text">
+            <a class="project-detail__back" href="mailto:johnuportfolio@gmail.com">Email me</a>
+          </p>
+        </article>
+
+        <article class="home__profile-card">
+          <p class="home__profile-label">LinkedIn</p>
+          <p class="home__profile-text">
+            <a class="project-detail__back" href="https://www.linkedin.com/in/johnuzoka/" target="_blank" rel="noopener">View LinkedIn profile</a>
+          </p>
+        </article>
+      </section>
+    </main>
   </body>
-  
 </html>
